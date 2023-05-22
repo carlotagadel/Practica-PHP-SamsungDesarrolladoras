@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ES">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario con PHP</title>
+    <link href="styles.css" rel="stylesheet" type="text/css">
+</head>
+
+<body> 
+    <section>
+        <div class="form-box">
+            <div class="form-value">
+                <form class="register-form" method="POST" action="formulario.php" onsubmit="return validarFormulario()">
+
+                    <h1>Formulario de registro</h1>
+
+                    <div class="input-box">
+                        <ion-icon name="person-circle-outline"></ion-icon>
+                        <input type="text" name="nombre" id="nombre"/>
+                        <label for="nombre">Nombre<span><em> (Requerido)</em></span></label>  <!--No pongo required porque prefiero que salga la alerta en el navegador-->
+                    </div>
+
+                    <div class="input-box">
+                        <ion-icon name="person-circle-outline"></ion-icon>
+                        <input type="text" name="apellido" id="apellido"/>
+                        <label for="apellido">Apellido<span><em> (Requerido)</em></span></label>
+                    </div>
+
+                    <div class="input-box">
+                        <ion-icon name="mail-outline"></ion-icon>
+                        <input type="email" name="email" id="email"/>
+                        <label for="email">Email<span><em> (Requerido)</em></span></label>
+                    </div>
+                    
+                    <input class="form-btn" name="submit" type="submit" value="Suscribirse"/>
+
+                </form>              
+            </div>
+        </div>   
+    </section>  
+
+<script src="script.js"></script>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
